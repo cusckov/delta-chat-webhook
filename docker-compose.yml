@@ -1,0 +1,18 @@
+services:
+  deltachat-webhook:
+    build: .
+    container_name: deltachat-webhook
+    restart: on-failure
+    ports:
+      - "8082:8082"
+    # Все настройки приложения — в отдельном .env (шаблон: .env.example).
+    # required: false — чтобы деплой не падал, если .env не загружен
+    # (например, когда переменные задаются прямо в UI Dokploy).
+    env_file:
+      - path: .env
+        required: false
+    volumes:
+      - deltachat_data:/data/accounts
+
+volumes:
+  deltachat_data:

@@ -1,0 +1,45 @@
+# ── Build artifacts ───────────────────────────────────────────────
+[Bb]in/
+[Oo]bj/
+[Pp]ublish/
+artifacts/
+*.dll
+*.pdb
+*.cache
+*.user
+*.suo
+*.swp
+*~
+
+# ── Secrets & local config ────────────────────────────────────────
+.env
+.env.local
+.env.*.local
+!.env.example
+*.local.json
+
+# ── Docker ────────────────────────────────────────────────────────
+docker-compose.override.yml
+
+# ── IDEs ──────────────────────────────────────────────────────────
+.vs/
+.vscode/
+.idea/
+.claude/settings.local.json
+*.swp
+*~
+
+# ── OS ────────────────────────────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.AppleDouble
+.LSOverride
+.Spotlight-V100
+.Trashes
+Thumbs.db
+desktop.ini
+
+# ── Logs ──────────────────────────────────────────────────────────
+*.log
+logs/
